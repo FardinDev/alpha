@@ -1,0 +1,57 @@
+<h1>Welcome</h1>
+
+
+<div class="play-container">
+  <p>You have clicked <button mat-button (click)="countClick()">THIS</button> {{ clickCounter }} times.</p>
+</div>
+
+<div class="play-container">
+<mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+  <mat-button-toggle value='Angular' disableRipple>Angular</mat-button-toggle>
+  <mat-button-toggle value='React' disableRipple>React</mat-button-toggle>
+  <mat-button-toggle value='Vue' disableRipple>Vue</mat-button-toggle>
+</mat-button-toggle-group>
+{{toggleGroup.value}}
+</div>
+
+<div class="play-container">
+  <mat-button-toggle-group #toggleGroupMultiple="matButtonToggleGroup" multiple>
+    <mat-button-toggle value='Angular' disableRipple>Angular</mat-button-toggle>
+    <mat-button-toggle value='React' disableRipple>React</mat-button-toggle>
+    <mat-button-toggle value='Vue' disableRipple>Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{toggleGroupMultiple.value}}
+</div>
+
+<div class="play-container">
+<mat-button-toggle-group #toggleGroupBadge="matButtonToggleGroup">
+  <mat-button-toggle value='SMS' disableRipple><mat-icon [matBadge]="clickCounter" matBadgeColor="primary" matBadgeSize="small" matBadgeOverlap="false">sms</mat-icon></mat-button-toggle>
+  <mat-button-toggle value='Notifications' disableRipple><mat-icon [matBadge]="clickCounter" matBadgeColor="accent" matBadgeSize="small" matBadgeOverlap="false">notifications</mat-icon></mat-button-toggle>
+  <mat-button-toggle value='Alerts' disableRipple><mat-icon [matBadge]="clickCounter" matBadgeColor="warn" matBadgeSize="small" matBadgeOverlap="false">warning</mat-icon></mat-button-toggle>
+</mat-button-toggle-group>
+{{toggleGroupBadge.value}}
+</div>
+
+
+
+
+<div class="play-container">
+  <p>
+    <input type="text" [(ngModel)]='text'>
+    <br>
+    <strong>You Typed: </strong> {{ text }}
+  </p>
+</div>
+
+
+<div class="play-container">
+
+  <ng-template [ngIf]="clickCounter > 5" [ngIfElse]="none">
+    <p>Greater Than 5</p>
+  </ng-template>
+
+  <ng-template #none>
+    <p>Less Than 5</p>
+  </ng-template>
+
+</div>
