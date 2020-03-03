@@ -1,15 +1,15 @@
+<ngx-loading-bar></ngx-loading-bar>
 <header>
   <div class="container">
-  <a href="#" class="logo">Alpha</a>
-  <nav>
-    <ul>
-      <li><a href="#" routerLinkActive="active" routerLink='/'  [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-      <li><a href="#" routerLinkActive="active" routerLink='/list'>Second Page</a></li>
-    </ul>
-  </nav>
+    <a href="#" class="logo">Alpha</a>
+    <nav>
+      <ul>
+        <li><a href="#" [routerLinkActive]="['active']" [routerLink]="['/']" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a href="#" [routerLinkActive]="['active']" [routerLink]="['/list']" [routerLinkActiveOptions]="{exact: true}">Second Page</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<div class="container">
+
   <router-outlet></router-outlet>
-</div>

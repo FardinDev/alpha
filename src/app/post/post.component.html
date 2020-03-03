@@ -1,0 +1,19 @@
+
+
+<div class="container">
+ 
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-evenly center" fxLayoutGap="25px">
+      <mat-card  fxFlex="calc(25%-25px)" fxFlex.xl="calc(25%-25px)" fxFlex.lg="calc(50%-25px)" fxFlex.sm="calc(50%-25px)">
+        <img mat-card-image src="https://i.picsum.photos/id/{{id }}/1200/600.jpg" onError="this.src='https://i.picsum.photos/id/1/400/200.jpg'" alt="Photo of {{id}}">
+        <mat-card-content>
+          <p>
+           {{id}} item.title
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <a routerLink='/barchart'>Chart</a>
+  </div>
+  
+  
